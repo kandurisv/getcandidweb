@@ -8,9 +8,9 @@ function MainPage() {
     return (
         <div className = {styles1.mainPage}>
             <main className={styles.main}>
-                <h1 className={styles.title}>India's 1st social product reviews platform </h1>
+                <h1 className={styles.title}>India&apos;s 1st social product reviews platform </h1>
                 <p className={styles.description}>
-                   Write and Read reviews for India's largest D2C brands. 
+                   Write and Read reviews for India&apos;s largest D2C brands. 
                 </p>
                 <div className={styles.grid}>
                     <a className={styles.card}>
