@@ -8,44 +8,39 @@ function MainPage() {
     return (
         <div className = {styles1.mainPage}>
             <main className={styles.main}>
-                <h1 className={styles.title}>This is homepage of <a href="https://nextjs.org">Next.js!</a></h1>
+                <h1 className={styles.title}>India's 1st social product reviews platform </h1>
                 <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.js</code>
+                   Write and Read reviews for India's largest D2C brands. 
                 </p>
                 <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>Find in-depth information about Next.js features and API.</p>
+                    <a href="" className={styles.card}>
+                        <h2>Discover &rarr;</h2>
+                        <p>Discover great Indian D2C products and take part in D2C revolution</p>
                     </a>
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>Learn about Next.js in an interactive course with quizzes!</p>
+                    <a href="" className={styles.card}>
+                        <h2>Social &rarr;</h2>
+                        <p>Write product reviews to influence your network </p>
                     </a>
-                    <a href="https://github.com/vercel/next.js/tree/master/examples" className={styles.card}>
-                        <h2>Examples &rarr;</h2>
-                        <p>Discover and deploy boilerplate example Next.js projects.</p>
+                    <a href="" className={styles.card}>
+                        <h2>Authentic &rarr;</h2>
+                        <p>Be authentic and increase your follower base.</p>
                     </a>
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                        >
-                        <h2>Deploy &rarr;</h2>
-                        <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
+                    <a href="" className={styles.card}>
+                        <h2>Share &rarr;</h2>
+                        <p>Save your liked products and share with your network.</p>
                     </a>
                 </div>
             </main>
-            <footer className={styles.footer}>
+            {/* <footer className={styles.footer}>
                 <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
+                    href=""
                     rel="noopener noreferrer">
                     Powered by{' '}
                     <span className={styles.logo}>
                         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
                     </span>
                  </a>
-            </footer>
+            </footer> */}
         </div>
     )
 }
