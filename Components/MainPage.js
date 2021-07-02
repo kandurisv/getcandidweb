@@ -13,34 +13,24 @@ function MainPage() {
                    Write and Read reviews for India's largest D2C brands. 
                 </p>
                 <div className={styles.grid}>
-                    <a href="" className={styles.card}>
+                    <a className={styles.card}>
                         <h2>Discover &rarr;</h2>
                         <p>Discover great Indian D2C products and take part in D2C revolution</p>
                     </a>
-                    <a href="" className={styles.card}>
+                    <a className={styles.card}>
                         <h2>Social &rarr;</h2>
                         <p>Write product reviews to influence your network </p>
                     </a>
-                    <a href="" className={styles.card}>
+                    <a className={styles.card}>
                         <h2>Authentic &rarr;</h2>
                         <p>Be authentic and increase your follower base.</p>
                     </a>
-                    <a href="" className={styles.card}>
+                    <a className={styles.card}>
                         <h2>Share &rarr;</h2>
                         <p>Save your liked products and share with your network.</p>
                     </a>
                 </div>
             </main>
-            {/* <footer className={styles.footer}>
-                <a
-                    href=""
-                    rel="noopener noreferrer">
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                    </span>
-                 </a>
-            </footer> */}
         </div>
     )
 }
