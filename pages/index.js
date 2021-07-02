@@ -15,11 +15,8 @@ export default function Home() {
         <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    
-      {/* <Header />*/}
       <Hero /> 
       <MainPage />
-      {/* <Footer /> */}
 
     </div>
   )
