@@ -1,22 +1,43 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Header from '../Components/Header'
-import Footer from '../Components/Footer'
-import Hero from '../Components/Hero'
 import MainPage from '../Components/MainPage'
+import {API} from '../utils/exports'
 
 
-export default function Home() {
+
+export default function Home(props) {
+  console.log("HOME", props)
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>India&apos;s first social review platform</title>
+        <title>Candid</title>
         <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/500SCircle.png" />
       </Head>
-      <Hero /> 
-      <MainPage />
+
+      <Header />
+      <MainPage content= {props} />
+
+      {/* Header */}
+
+      {/* Nav Bar */}
+
+      {/* Main Component */}
+
+      {/* Footer */}
+    
     </div>
   )
+}
+
+export async function getServerSideProps() {
+
+  
+
+  // Fetch data from external API
+  const res = await fetch(API + 'home/')
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
 }
