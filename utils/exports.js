@@ -1,0 +1,1 @@
+export const API = "https://lnsig7iddg.execute-api.ap-south-1.amazonaws.com/dev/"

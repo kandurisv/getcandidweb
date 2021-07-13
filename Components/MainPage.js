@@ -1,38 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import React from 'react'
-import styles1 from '../styles/componentStyles.module.css'
-import styles from '../styles/Home.module.css'
+import ReviewItem from "./ReviewItem"
 
-function MainPage() {
+function MainPage({content}) {
     return (
-        <div className = {styles1.mainPage}>
-            <main className={styles.main}>
-                <h1 className={styles.title}>India&apos;s 1st social product reviews platform </h1>
-                <p className={styles.description}>
-                   Write and Read reviews for India&apos;s largest D2C brands. 
-                </p>
-                <div className={styles.grid}>
-                    <a className={styles.card}>
-                        <h2>Discover &rarr;</h2>
-                        <p>Discover great Indian D2C products and take part in D2C revolution</p>
-                    </a>
-                    <a className={styles.card}>
-                        <h2>Social &rarr;</h2>
-                        <p>Write product reviews to influence your network </p>
-                    </a>
-                    <a className={styles.card}>
-                        <h2>Authentic &rarr;</h2>
-                        <p>Be authentic and increase your follower base.</p>
-                    </a>
-                    <a className={styles.card}>
-                        <h2>Share &rarr;</h2>
-                        <p>Save your liked products and share with your network.</p>
-                    </a>
-                </div>
-            </main>
+        <div className = "flex-col max-w-xl px-2 my-2 items-center mx-auto justify-self-center ">
+            {
+                content.data.map((item,index)=>{
+                    return(
+                        <div>
+                            <ReviewItem key = {index} item = {item}/>
+                        </div>
+                        )
+                })
+            }
         </div>
     )
 }
+
+//sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4
 
 export default MainPage
