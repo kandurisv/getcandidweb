@@ -6,8 +6,8 @@ function MainPage({content}) {
             {
                 content.data.map((item,index)=>{
                     return(
-                        <div>
-                            <ReviewItem key = {index} item = {item}/>
+                        <div key = {index} >
+                            <ReviewItem item = {item}/>
                         </div>
                         )
                 })

@@ -15,11 +15,11 @@ function Header() {
     <header className = "flex flex-col md:flex-row mt-2 mx-5 justify-between items-center h-auto">
       <div className = "flex justify-evenly mt-3">
         <div>
-          <Image width={40} height={40} src={'/LogoOutlineColor.png'} layout = 'fixed'/>
+          <Image width={40} height={40} src={'/LogoOutlineColor.png'} alt="Candid Logo" layout = 'fixed'/>
         </div>
         <div className = "hidden md:inline-flex md:w-2"/>
         <div className = "hidden md:inline-flex">
-          <Image width={110} height={40} src={'/NameLogoColorWhiteSolid.png'} layout = 'fixed' />
+          <Image width={110} height={40} src={'/NameLogoColorWhiteSolid.png'} alt="Candid Name"layout = 'fixed' />
         </div>
       </div>
       <div className = "flex w-2/3 md:w-1/4 xl:w-3/5 items-center rounded-lg border-2 bg-gray-300 mt-3">
