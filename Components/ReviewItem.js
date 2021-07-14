@@ -13,8 +13,8 @@ function ReviewItem({item}) {
     })
     return (
         item.image_list[0] ? 
-        <div className = "max-w-xl mt-1 p-2 group transition duration-200 ease-in transform ">
-            <h2 className = "text-red-600 text-2xl ">{item.username}</h2>
+        <div className = "max-w-xl mt-1 group transition duration-200 ease-in transform ">
+            <h2 className = "text-red-600 text-2xl mb-1 font-bold">{item.username}</h2>
             <Image
                 alt={item.product_name + " Type : " + item.category_name}
                 src={item.image_list[0]}
@@ -23,7 +23,7 @@ function ReviewItem({item}) {
                 height={400}
             />
             <div className = "mt-2 mx-2 ">
-                <p className = "text-gray-100 text-xl " >{item.product_name}</p>
+                <p className = "text-black text-xl font-bold " >{item.product_name}</p>
                 <p>{review}</p>
             </div>
             <div className = "flex justify-content items-center flex-end px-2">
