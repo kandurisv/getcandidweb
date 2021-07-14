@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../Components/Header'
+import InstagramWidget from '../Components/InstagramWidget'
 import MainPage from '../Components/MainPage'
 import {API} from '../utils/exports'
 
@@ -14,10 +15,14 @@ export default function Home(props) {
         <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
         <link rel="icon" href="/500SCircle.png" />
       </Head>
-
-      <Header />
-      <MainPage content= {props} />
-
+      <div>
+        <div className = "bg-white sticky top-0 z-50">
+          <Header />
+        </div>
+        <div>
+          <MainPage content= {props} />
+        </div>
+      </div>
       {/* Header */}
 
       {/* Nav Bar */}
