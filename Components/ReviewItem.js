@@ -16,7 +16,10 @@ function ReviewItem({item}) {
         <div className = "flex flex-col w-full lg:flex-row mt-1 group transition duration-200 ease-in transform ">
             <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
                 <div className = "max-w-2xl md:mx-auto lg:px-auto ">
-                    <a href="https://www.instagram.com/kandurisv/" target = "_blank" className = "text-red-600 text-2xl font-bold cursor-pointer">{item.username}</a>
+                    <a href="https://www.instagram.com/kandurisv/" 
+                        target = "_blank" 
+                        rel="noreferrer"
+                        className = "text-red-600 text-2xl font-bold cursor-pointer">{item.username}</a>
                     <div className = "mt-2 md:mx-auto md:justify-center md:justify-self-center bg-green-100">
                         <Image
                             alt={item.product_name + " Type : " + item.category_name}

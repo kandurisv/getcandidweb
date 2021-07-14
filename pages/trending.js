@@ -1,6 +1,7 @@
 import Header from '../Components/Header'
 import {API} from '../utils/exports'
 import Head from 'next/head'
+import ClickableItem from '../Components/ClickableItem'
 
 
 function trending(props) {
@@ -12,8 +13,13 @@ function trending(props) {
                 <meta name="description" content="Trending Reviews. Now discover and share new Indian products by downloading Candid App " />
                 <link rel="icon" href="/500SCircle.png" />
             </Head>
+            <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
             <Header />
-            <p>This is trending page</p>
+            </div>
+            <div className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ">
+                <ClickableItem src = "/500SCircle.png" alt = "Logo" title = "Logo"/>
+            </div>
+            
         </div>
     )
 }

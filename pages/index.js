@@ -16,7 +16,7 @@ export default function Home(props) {
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
-        <div className = "bg-white sticky top-0 z-50">
+        <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
           <Header />
         </div>
         <div>

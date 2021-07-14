@@ -10,7 +10,9 @@ function concerns(props) {
                 <meta name="description" content="Search by concerns" />
                 <link rel="icon" href="/500SCircle.png" />
             </Head>
+            <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
             <Header />
+            </div>
             <p>This is concerns page</p>
         </div>
     )
