@@ -1,9 +1,17 @@
+import Header from '../Components/Header'
 import {API} from '../utils/exports'
+import Head from 'next/head'
 
 function brands(props) {
     console.log("Brands",props)
     return (
         <div>
+            <Head>
+                <title>Brands Candid</title>
+                <meta name="description" content="Search by brands" />
+                <link rel="icon" href="/500SCircle.png" />
+            </Head>
+            <Header />
               <p>This is brands page</p>
         </div>
     )
