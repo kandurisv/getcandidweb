@@ -11,7 +11,9 @@ function brands(props) {
                 <meta name="description" content="Search by brands" />
                 <link rel="icon" href="/500SCircle.png" />
             </Head>
+            <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
             <Header />
+            </div>
               <p>This is brands page</p>
         </div>
     )

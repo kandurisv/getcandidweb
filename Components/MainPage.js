@@ -2,7 +2,7 @@ import ReviewItem from "./ReviewItem"
 
 function MainPage({content}) {
     return (
-        <div className = "flex-col max-w-xl px-2 my-2 items-center mx-auto justify-self-center ">
+        <div className = "px-2 my-2 items-center mx-auto justify-self-center ">
             {
                 content.data.map((item,index)=>{
                     return(

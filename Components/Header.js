@@ -12,8 +12,8 @@ function Header() {
   }
 
   return (
-    <header className = "flex flex-col md:flex-row mt-2 mx-5 justify-between items-center h-auto">
-      <div className = "flex justify-evenly mt-3">
+    <header className = "flex flex-col md:flex-row mx-5 justify-between items-center h-auto">
+      <div className = "flex justify-evenly mt-3 md:my-3">
         <div>
           <Image width={40} height={40} src={'/LogoOutlineColor.png'} alt="Candid Logo" layout = 'fixed'/>
         </div>
@@ -22,7 +22,7 @@ function Header() {
           <Image width={110} height={40} src={'/NameLogoColorWhiteSolid.png'} alt="Candid Name"layout = 'fixed' />
         </div>
       </div>
-      <div className = "flex w-2/3 md:w-1/4 xl:w-3/5 items-center rounded-lg border-2 bg-gray-300 mt-3">
+      <div className = "flex w-2/3 md:w-1/4 xl:w-3/5 items-center rounded-lg border-2 bg-gray-300 mt-3 md:my-3 ">
         <form className = "flex-grow rounded-lg ">
             <input 
                 className=" w-full focus:outline-none rounded-lg text-sm text-black placeholder-gray-500  py-2 pl-5" 
