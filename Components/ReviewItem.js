@@ -15,7 +15,7 @@ function ReviewItem({item}) {
         item.image_list[0] ? 
         <div className = "flex flex-col w-full lg:flex-row mt-1 group transition duration-200 ease-in transform ">
             <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
-                <div className = "max-w-2xl md:mx-auto lg:px-auto ">
+                <div className = "max-w-lg md:mx-auto lg:px-auto ">
                     <a href="https://www.instagram.com/kandurisv/" 
                         target = "_blank" 
                         rel="noreferrer"

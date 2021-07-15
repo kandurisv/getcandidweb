@@ -1,6 +1,6 @@
 import ReviewItem from "./ReviewItem"
 
-function MainPage({content}) {
+const MainPage = ({content}) => {
     return (
         <div className = "px-2 my-2 items-center mx-auto justify-self-center ">
             {

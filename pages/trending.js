@@ -2,10 +2,22 @@ import Header from '../Components/Header'
 import {API} from '../utils/exports'
 import Head from 'next/head'
 import ClickableItem from '../Components/ClickableItem'
+import React from 'react'
+import MainPage from '../Components/MainPage'
 
 
-function trending(props) {
+const Trending = (props) => {
     console.log(props)
+    const [data,setData] = React.useState(props)
+    const searchTextClick = async(keyword) => {
+        console.log("INDEX",keyword)
+        axios.get(API + "search", {params: {str2Match : keyword}})
+        .then(res => setData(res))
+        .catch(function (error) {
+             
+        })
+      }
+
     return (
         <div>
             <Head>
@@ -14,10 +26,10 @@ function trending(props) {
                 <link rel="icon" href="/500SCircle.png" />
             </Head>
             <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
-            <Header />
+            <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} />
             </div>
-            <div className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ">
-                <ClickableItem src = "/500SCircle.png" alt = "Logo" title = "Logo"/>
+            <div>
+                <MainPage content= {data} />
             </div>
             
         </div>
@@ -33,4 +45,4 @@ export async function getServerSideProps() {
     return { props: { data } }
 }
 
-export default trending
+export default Trending
