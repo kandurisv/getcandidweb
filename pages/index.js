@@ -3,11 +3,35 @@ import Header from '../Components/Header'
 import InstagramWidget from '../Components/InstagramWidget'
 import MainPage from '../Components/MainPage'
 import {API} from '../utils/exports'
+import axios from 'axios'
+import React from 'react'
 
+import useSWR from 'swr'
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
+ const Home = (props) => {
 
-export default function Home(props) {
+  const [data,setData] = React.useState(props)
+
+  // const { data, error } = useSWR('/api/user/123', fetcher)
+
+  // if (error) return <div>failed to load</div>
+  // if (!data) return <div>loading...</div>
+
+  // // render data
+  // return <div>hello {data.name}!</div>
+
   console.log("HOME", props)
+
+  const searchTextClick = async(keyword) => {
+    console.log("INDEX",keyword)
+    axios.get(API + "search", {params: {str2Match : keyword}})
+    .then(res => setData(res))
+    .catch(function (error) {
+         
+    })
+  }
+
   return (
     <div>
       <Head>
@@ -17,10 +41,10 @@ export default function Home(props) {
       </Head>
       <div>
         <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
-          <Header />
+          <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} />
         </div>
         <div>
-          <MainPage content= {props} />
+          <MainPage content= {data} />
         </div>
       </div>
       {/* Header */}
@@ -34,6 +58,8 @@ export default function Home(props) {
     </div>
   )
 }
+
+export default Home
 
 export async function getServerSideProps() {
 
