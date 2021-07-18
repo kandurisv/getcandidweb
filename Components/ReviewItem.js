@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { BiHeart } from 'react-icons/bi'
-import { FaComments, FaHeart } from 'react-icons/fa'
+import { FaComments, FaHeart, FaInstagram } from 'react-icons/fa'
 
 
 function ReviewItem({item}) {
@@ -13,20 +13,22 @@ function ReviewItem({item}) {
     })
     return (
         item.image_list[0] ? 
-        <div className = "flex flex-col w-full lg:flex-row mt-1 group transition duration-200 ease-in transform ">
+        <div className = "flex flex-col w-full lg:flex-row mt-0 lg:mt-3 lg:pt-3 lg:border-t-2 group transition duration-200 ease-in transform ">
             <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
                 <div className = "max-w-lg md:mx-auto lg:px-auto ">
                     <a href="https://www.instagram.com/kandurisv/" 
                         target = "_blank" 
                         rel="noreferrer"
                         className = "text-red-600 text-2xl font-bold cursor-pointer">{item.username}</a>
-                    <div className = "mt-2 md:mx-auto md:justify-center md:justify-self-center bg-green-100">
+                    <div className = "mt-2 md:mx-auto md:justify-center md:justify-self-center bg-green-100 ">
                         <Image
                             alt={item.product_name + " Type : " + item.category_name}
                             src={item.image_list[0]}
                             layout="responsive"
                             width={400}
                             height={400}
+                            // layout = "fill"
+                           
                         />
                     </div>
                 </div>
@@ -39,6 +41,12 @@ function ReviewItem({item}) {
                 <div className = "flex justify-content items-center flex-end px-2">
                     <p className = "flex items-center px-2">{item.upvote ? item.upvote : 0} <FaHeart className = "mx-1"/> </p>
                     <p className = "flex items-center px-2"> {item.number_of_comments ? item.number_of_comments : 0} <FaComments className = "mx-1"/></p>
+                    <a href = "https://www.instagram.com/kandurisv/" 
+                      target = "_blank" 
+                        rel="noreferrer"
+                    className = "flex items-center px-2 text-grey-500 text-xs hover:border-b-2 hover:text-red-500  ">
+                        <FaInstagram className = "mx-1"/>View on Instagram
+                    </a>
                 </div>
             </div>   
             <div  className = "h-1 bg-red-100 mb-2 lg:hidden" />         

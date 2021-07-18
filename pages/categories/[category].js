@@ -27,8 +27,8 @@ const Category = () => {
   return (
     <div>
       <Head>
-        <title>Candid</title>
-        <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
+        <title>{category} reviews page</title>
+        <meta name="description" content={"Find best products in " + category + "and read authentic reviews about them"} />
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
