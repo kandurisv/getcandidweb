@@ -19,7 +19,7 @@ const Header = ({onSearchHeader}) => {
   return (
     <header className = "flex flex-col md:flex-row mx-5 justify-between items-center h-auto">
         <Link href= {'/'} passHref>
-          <div className = "cursor-pointer flex justify-evenly mt-3 md:my-3">
+          <div className = "cursor-pointer flex justify-evenly mt-3 md:mt-0">
             <div>
               <Image width={40} height={40} src={'/LogoOutlineColor.png'} alt="Candid Logo" layout = 'fixed'/>
             </div>
@@ -30,7 +30,7 @@ const Header = ({onSearchHeader}) => {
             </div>
         </Link>
 
-      <div className = "flex w-2/3 md:w-1/4 xl:w-3/5 items-center rounded-lg border-2 bg-gray-300 mt-3 md:my-3 ">
+      <div className = "flex w-11/12 md:w-1/4 xl:w-3/5 items-center rounded-lg border-2 bg-gray-300 mt-3 md:mt-0 ">
         <form className = "flex-grow rounded-lg ">
             <input 
                 className=" w-full focus:outline-none rounded-lg text-sm text-black placeholder-gray-500  py-2 pl-5" 
@@ -43,11 +43,11 @@ const Header = ({onSearchHeader}) => {
                 />
         </form>
       </div>
-      <div className = "flex justify-evenly max-w-2xl mt-3 md:mt-9">
+      <div className = "flex justify-evenly max-w-2xl mt-3 md:mt-3">
         <HeaderItem title = "HOME" Icon = {HomeIcon} page = "/" />
-        <HeaderItem title = "TRENDING" Icon = {LightningBoltIcon} page = "/trending" />
-        <HeaderItem title = "BRANDS" Icon = {ShoppingBagIcon} page = "/brands"/>
-        <HeaderItem title = "CATEGORIES" Icon = {CollectionIcon} page = "/categories"/>
+        <HeaderItem title = "TRENDING" Icon = {LightningBoltIcon} page = "/Trending" />
+        <HeaderItem title = "BRANDS" Icon = {ShoppingBagIcon} page = "/Brands"/>
+        <HeaderItem title = "CATEGORIES" Icon = {CollectionIcon} page = "/Categories"/>
       </div>
       
     </header>
