@@ -45,9 +45,9 @@ const Header = ({onSearchHeader}) => {
       </div>
       <div className = "flex justify-evenly max-w-2xl mt-3 md:mt-3">
         <HeaderItem title = "HOME" Icon = {HomeIcon} page = "/" />
-        <HeaderItem title = "TRENDING" Icon = {LightningBoltIcon} page = "/Trending" />
-        <HeaderItem title = "BRANDS" Icon = {ShoppingBagIcon} page = "/Brands"/>
-        <HeaderItem title = "CATEGORIES" Icon = {CollectionIcon} page = "/Categories"/>
+        <HeaderItem title = "TRENDING" Icon = {LightningBoltIcon} page = "/trending" />
+        <HeaderItem title = "BRANDS" Icon = {ShoppingBagIcon} page = "/brands"/>
+        <HeaderItem title = "CATEGORIES" Icon = {CollectionIcon} page = "/categories"/>
       </div>
       
     </header>
