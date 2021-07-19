@@ -11,12 +11,15 @@ function ReviewItem({item}) {
         review = review + "Day " + item.day_product_used_content[index] + ": " + reviewItem + "\n"
       }
     })
+
+    var instagramLink = item.instagram_username || item.instagram_username != "" ?("https://www.instagram.com/" + item.instagram_username +"/") :  "https://www.instagram.com/" 
+
     return (
         item.image_list[0] ? 
         <div className = "flex flex-col w-full lg:flex-row mt-0 lg:mt-3 lg:pt-3 lg:border-t-2 group transition duration-200 ease-in transform ">
             <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
                 <div className = "max-w-lg md:mx-auto lg:px-auto ">
-                    <a href="https://www.instagram.com/kandurisv/" 
+                    <a href={instagramLink} 
                         target = "_blank" 
                         rel="noreferrer"
                         className = "text-red-600 text-2xl font-bold cursor-pointer">{item.username}</a>
@@ -41,7 +44,7 @@ function ReviewItem({item}) {
                 <div className = "flex justify-content items-center flex-end px-2">
                     <p className = "flex items-center px-2">{item.upvote ? item.upvote : 0} <FaHeart className = "mx-1"/> </p>
                     <p className = "flex items-center px-2"> {item.number_of_comments ? item.number_of_comments : 0} <FaComments className = "mx-1"/></p>
-                    <a href = "https://www.instagram.com/kandurisv/" 
+                    <a href = {instagramLink}
                       target = "_blank" 
                         rel="noreferrer"
                     className = "flex items-center px-2 text-grey-500 text-xs hover:border-b-2 hover:text-red-500  ">
