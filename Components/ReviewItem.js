@@ -18,7 +18,7 @@ function ReviewItem({item}) {
         item.image_list[0] ? 
         <div className = "flex flex-col w-full lg:flex-row mt-0 lg:mt-3 lg:pt-3 lg:border-t-2 group transition duration-200 ease-in transform ">
             <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
-                <div className = "max-w-lg md:mx-auto lg:px-auto ">
+                <div className = "max-w-md md:mx-auto lg:px-auto ">
                     <a href={instagramLink} 
                         target = "_blank" 
                         rel="noreferrer"
@@ -28,7 +28,7 @@ function ReviewItem({item}) {
                             alt={item.product_name + " Type : " + item.category_name}
                             src={item.image_list[0]}
                             layout="responsive"
-                            width={400}
+                            width={300}
                             height={400}
                             // layout = "fill"
                            
