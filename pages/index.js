@@ -21,14 +21,17 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
   // // render data
   // return <div>hello {data.name}!</div>
 
-  console.log("HOME", props)
+ 
 
   const searchTextClick = async(keyword) => {
     console.log("INDEX",keyword)
     axios.get(API + "search", {params: {str2Match : keyword}})
-    .then(res => setData(res))
+    .then(res => {
+      console.log("Search Result",res)
+      setData(res)
+    })
     .catch(function (error) {
-         
+         console.log(error)
     })
   }
 
@@ -43,7 +46,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
         <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
           <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} />
         </div>
-        <div className = "bg-red-300 flex items-center justify-center py-1">
+        <div className = "bg-blue-50 flex items-center justify-center py-1">
           <p className = "">For full functionality, Download our <a 
           href='https://play.google.com/store/apps/details?id=com.candid.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
           target="_blank"
@@ -75,7 +78,7 @@ export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(API + 'home/')
   const data = await res.json()
-
+  
   // Pass data to the page via props
   return { props: { data } }
 }

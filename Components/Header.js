@@ -10,6 +10,7 @@ const Header = ({onSearchHeader}) => {
   const [keyword,setKeyword] = React.useState("")
  
   const onSearchClick = (event) => {
+   
     if(event.key === 'Enter'){
     console.log("HEADER",keyword)
     onSearchHeader(keyword)

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+
 import { BiHeart } from 'react-icons/bi'
 import { FaComments, FaHeart, FaInstagram } from 'react-icons/fa'
 
@@ -8,7 +9,7 @@ function ReviewItem({item}) {
     var review = ""
     item.content.map((reviewItem,index) => {
       if(reviewItem.length > 0) {
-        review = review + "Day " + item.day_product_used_content[index] + ": " + reviewItem + "\n"
+        review = review + "Day " + item.day_product_used_content[index] + " : " + reviewItem + '\n'
       }
     })
 
@@ -17,29 +18,30 @@ function ReviewItem({item}) {
     return (
         item.image_list[0] ? 
         <div className = "flex flex-col w-full lg:flex-row mt-0 lg:mt-3 lg:pt-3 lg:border-t-2 group transition duration-200 ease-in transform ">
-            <div className = "lg:w-2/3 lg:mx-auto lg:px-auto justify-center items-center">
-                <div className = "max-w-md md:mx-auto lg:px-auto ">
+            <div className = " lg:w-3/5 lg:mx-auto lg:px-auto justify-center items-center ">
+                <div className = "max-w-md md:mx-auto lg:px-auto  ">
                     <a href={instagramLink} 
                         target = "_blank" 
                         rel="noreferrer"
                         className = "text-red-600 text-2xl font-bold cursor-pointer">{item.username}</a>
-                    <div className = "mt-2 md:mx-auto md:justify-center md:justify-self-center bg-green-100 ">
+                    <div className = "flex mx-auto justify-self-center justify-center mt-2 md:mx-auto md:justify-center md:justify-self-center lg:justify-start">
                         <Image
                             alt={item.product_name + " Type : " + item.category_name}
                             src={item.image_list[0]}
-                            layout="responsive"
+                            //layout="responsive"
                             width={300}
                             height={400}
+                            className = "object-contain lg:object-cover" 
                             // layout = "fill"
                            
                         />
                     </div>
                 </div>
             </div>
-            <div className = "lg:w-1/3 lg:mt-10">
-                <div className = "mt-2 lg:mt-10 mx-3  ">
+            <div className = "lg:w-2/5 lg:mt-0 ">
+                <div className = "mt-2 lg:mt-2 mx-3   ">
                     <p className = "text-black text-xl font-bold " >{item.product_name}</p>
-                    <p>{review}</p>
+                    <p className = "whitespace-pre-line">{review}</p>
                 </div>
                 <div className = "flex justify-content items-center flex-end px-2">
                     <p className = "flex items-center px-2">{item.upvote ? item.upvote : 0} <FaHeart className = "mx-1"/> </p>
