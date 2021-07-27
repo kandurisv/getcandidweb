@@ -11,7 +11,7 @@ const ClickableItem = ({src,alt,title,link}) => {
                     height={100} 
                     layout="responsive"
                     src={src} 
-                    alt={alt , title , link  }/>
+                    alt={alt}/>
                 </div>
                 <p className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl lg:text-3xl xl:text-3xl">{title}</p>
             </div>
