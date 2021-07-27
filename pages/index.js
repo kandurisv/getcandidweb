@@ -6,25 +6,27 @@ import MainPage from '../Components/MainPage'
 import {API} from '../utils/exports'
 import axios from 'axios'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 
 
  const Home = (props) => {
+
+  const router = useRouter()
 
   const [data,setData] = React.useState(props)
 
  
 
   const searchTextClick = async(keyword) => {
-    console.log("INDEX",keyword)
-    axios.get(API + "search", {params: {str2Match : keyword}})
-    .then(res => {
-      console.log("Search Result",res)
-      setData(res)
-    })
-    .catch(function (error) {
-         console.log(error)
-    })
+    // console.log("INDEX",keyword)
+    // console.log("API=",API + 'search/?str2Match=' + keyword.replace(" ","%20"))
+    // const res = await fetch(API + 'search/' + '?str2Match=' + keyword.replace(" ","%20"))
+    // const data = await res.json()
+    // console.log("Data ", res)
+   
+    router.push("/"+keyword.replace(" ","%20"))
+
   }
 
   return (
