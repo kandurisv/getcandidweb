@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 import InstagramWidget from '../Components/InstagramWidget'
 import MainPage from '../Components/MainPage'
 import {API} from '../utils/exports'
@@ -38,8 +39,8 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
   return (
     <div>
       <Head>
-        <title>Candid</title>
-        <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
+        <title>Candid Reviews - Get authentic reviews for all D2C brands </title>
+        <meta name="description" content="Reviews for all D2C Indian products. We are India's first social platform for authentic product reviews on new age Indian brands in skin care , hair care and other categories. Now discover and share new D2C products by downloading Candid App. Review them at day level & connect with influencers by using View on Instagram for chat" />
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
@@ -55,6 +56,9 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
         </div>
         <div>
           <MainPage content= {data} />
+        </div>
+        <div className = "bg-white lg:sticky lg:bottom-0 lg:z-50">
+          <Footer />
         </div>
       </div>
       {/* Header */}
