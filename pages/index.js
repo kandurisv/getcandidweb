@@ -39,7 +39,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
   return (
     <div>
       <Head>
-        <title>Candid Reviews - Get authentic reviews for all D2C brands </title>
+        <title>Candid Reviews - Home - Get authentic reviews for all D2C brands </title>
         <meta name="description" content="Reviews for all D2C Indian products. We are India's first social platform for authentic product reviews on new age Indian brands in skin care , hair care and other categories. Now discover and share new D2C products by downloading Candid App. Review them at day level & connect with influencers by using View on Instagram for chat" />
         <link rel="icon" href="/500SCircle.png" />
       </Head>
@@ -48,11 +48,11 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
           <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} />
         </div>
         <div className = "bg-blue-50 flex items-center justify-center py-1">
-          <p className = "">For full functionality, Download our <a 
+          <h1 className = "">For full functionality, Download our <a 
           href='https://play.google.com/store/apps/details?id=com.candid.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
           target="_blank"
           rel="noreferrer"
-          className = "cursor-pointer text-blue-500 hover:border-b-2 hover:border-blue-400 ">App</a> </p>
+          className = "cursor-pointer text-blue-500 hover:border-b-2 hover:border-blue-400 ">App</a> </h1>
         </div>
         <div>
           <MainPage content= {data} />

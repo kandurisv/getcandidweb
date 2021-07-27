@@ -13,7 +13,7 @@ const ClickableItem = ({src,alt,title,link}) => {
                     src={src} 
                     alt={alt}/>
                 </div>
-                <p className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl lg:text-3xl xl:text-3xl">{title}</p>
+                <h2 className = "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl lg:text-3xl xl:text-3xl">{title}</h2>
             </div>
         </Link>
     )

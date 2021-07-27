@@ -40,7 +40,7 @@ function ReviewItem({item}) {
             </div>
             <div className = "lg:w-2/5 lg:mt-0 ">
                 <div className = "mt-2 lg:mt-2 mx-3   ">
-                    <p className = "text-black text-xl font-bold " >{item.product_name}</p>
+                    <h3 className = "text-black text-xl font-bold " >{item.product_name}</h3>
                     <p className = "whitespace-pre-line">{review}</p>
                 </div>
                 <div className = "flex justify-content items-center flex-end px-2">
