@@ -1,9 +1,18 @@
+import Head from 'next/head'
 import React from 'react'
+
 
 function privacypolicy() {
     return (
         <div>
-            <p>Privacy Policy
+            <Head>
+        <title>Candid Reviews - Privacy Policy </title>
+        <meta name="description" content="This page contains the privacy policy of the Candid Reviews App. By downloading the app, you are accepting candid reviews privacy policy." />
+        <link rel="icon" href="/500SCircle.png" />
+      </Head>
+            <div>
+            <h1>Privacy Policy</h1>
+            <p>
 Mish Fit built the Candid app as a Free app. This SERVICE is provided by Mish Fit at no cost and is intended for use as is.
 
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
@@ -64,6 +73,7 @@ Contact Us
 If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at sai@mish.fit.
 
 </p>
+</div>
         </div>
     )
 }
