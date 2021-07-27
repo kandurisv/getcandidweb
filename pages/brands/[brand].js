@@ -6,28 +6,28 @@ import MainPage from '../../Components/MainPage'
 import { API } from '../../utils/exports'
 import axios from 'axios'
 
-const Brand = () => {
+const Brand = (props) => {
   const router = useRouter()
   const { brand } = router.query
-  const [data,setData] = React.useState({data : []})
+  const [data,setData] = React.useState(props)
 
-  React.useEffect(() => {
-    console.log(API)
-  axios.get(API + "search", {params: {str2Match : brand}})
-  .then(res => {
-      console.log(res)
-      console.log(data)
-      setData(res)
-  })
-  .catch(function (error) {   
-  })
-},[brand,data])
+//   React.useEffect(() => {
+//     console.log(API)
+//     axios.get(API + "search", {params: {str2Match : brand}})
+//     .then(res => {
+//       console.log(res)
+//       console.log(data)
+//       setData(res)
+//   })
+//   .catch(function (error) {   
+//   })
+// },[brand,data])
 
 return (
     <div>
       <Head>
-        <title>Candid</title>
-        <meta name="description" content="Reviews for all D2C Indian products. Now discover and share new Indian products by downloading Candid App " />
+        <title>Candid Reviews for {brand}</title>
+        <meta name="description" content={"This is the brand page of "+ brand + " . Read Authentic reviews posted by users for this brand."} />
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
@@ -44,5 +44,18 @@ return (
   )
 
 }
+
+export async function getServerSideProps(context) {
+  
+  const { brand } = context.params
+
+  // Fetch data from external API
+  const res = await fetch(API + 'search/' + '?str2Match=' + brand)
+  const data = await res.json()
+  
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
 
 export default Brand
