@@ -10,13 +10,9 @@ const Trending = (props) => {
     console.log(props)
     const [data,setData] = React.useState(props)
     console.log("Trending", props)
+    const router = useRouter()
     const searchTextClick = async(keyword) => {
-        console.log("INDEX",keyword)
-        axios.get(API + "search", {params: {str2Match : keyword}})
-        .then(res => setData(res))
-        .catch(function (error) {
-             
-        })
+        router.push("/"+keyword.replace(" ","%20"))
       }
 
     return (

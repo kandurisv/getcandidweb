@@ -41,7 +41,7 @@ function ReviewItem({item}) {
             <div className = "lg:w-2/5 lg:mt-0 ">
                 <div className = "mt-2 lg:mt-2 mx-3   ">
                     <h3 className = "text-black text-xl font-bold " >{item.product_name}</h3>
-                    <p className = "whitespace-pre-line">{review}</p>
+                    <p className = "whitespace-pre-line break-words text-black">{review}</p>
                 </div>
                 <div className = "flex justify-content items-center flex-end px-2">
                     <p className = "flex items-center px-2">{item.upvote ? item.upvote : 0} <FaHeart className = "mx-1"/> </p>

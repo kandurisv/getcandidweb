@@ -7,6 +7,7 @@ import {API} from '../utils/exports'
 import axios from 'axios'
 import React from 'react'
 import { useRouter } from 'next/router'
+import { route } from 'next/dist/next-server/server/router'
 
 
 
@@ -16,7 +17,14 @@ import { useRouter } from 'next/router'
 
   const [data,setData] = React.useState(props)
 
- 
+  // React.useEffect(async () => {
+  //   console.log("Router query", router.query)
+  //   const res = await fetch(API + 'search/?str2Match' + router.query)
+  //   const data = await res.json()
+  //   console.log({data})
+  //   setData({ data })
+  // }, [router.query.counter])
+
 
   const searchTextClick = async(keyword) => {
     // console.log("INDEX",keyword)
@@ -25,7 +33,10 @@ import { useRouter } from 'next/router'
     // const data = await res.json()
     // console.log("Data ", res)
    
-    router.push("/"+keyword.replace(" ","%20"))
+   // router.push("/"+keyword.replace(" ","%20"))
+
+
+    router.push('/?str2Match=' + keyword, undefined, { shallow: true })
 
   }
 
