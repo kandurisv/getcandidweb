@@ -54,7 +54,7 @@ const Post = () => {
               className = "cursor-pointer text-blue-500 hover:border-b-2 hover:border-blue-400 ">App</a> </h1>
             </div>
             <div>
-            {review ? 
+            {review.review_sum_id ? 
               <ReviewItem item = {review}/> : null
             }
             </div>
