@@ -40,6 +40,10 @@ function ReviewItem({item}) {
             </div>
             <div className = "lg:w-2/5 lg:mt-0 ">
                 <div className = "mt-2 lg:mt-2 mx-3   ">
+                    <a href= {"https://www.getcandid.app/post?id=" + item.review_sum_id }
+                        target = "_blank" 
+                        rel="noreferrer"
+                        className = "text-black text-xl font-bold cursor-pointer">{item.product_name}</a>
                     <h3 className = "text-black text-xl font-bold " >{item.product_name}</h3>
                     <p className = "whitespace-pre-line break-words text-black">{review}</p>
                 </div>
