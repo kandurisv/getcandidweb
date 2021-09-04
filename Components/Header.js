@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeaderItem from './HeaderItem'
 import React from 'react'
-import { HomeIcon,CollectionIcon, LightningBoltIcon , PuzzleIcon , ShoppingBagIcon , HashtagIcon} from '@heroicons/react/solid'
+import { HomeIcon,CollectionIcon, LightningBoltIcon , PuzzleIcon , ShoppingBagIcon , HashtagIcon , AnnotationIcon} from '@heroicons/react/outline'
 
 
 const Header = ({onSearchHeader}) => {
@@ -62,7 +62,7 @@ const Header = ({onSearchHeader}) => {
         </div>
         <div className = "flex justify-evenly max-w-2xl mt-3 md:mt-3 content-center xl:mt-3 pt-3 ">
           <HeaderItem title = "HOME" Icon = {HomeIcon} page = "/" />
-          <HeaderItem title = "TRENDING" Icon = {LightningBoltIcon} page = "/trending" />
+          <HeaderItem title = "BLOG" Icon = {AnnotationIcon} page = "https://blog.getcandid.app" />
           <HeaderItem title = "BRANDS" Icon = {ShoppingBagIcon} page = "/brands"/>
           <HeaderItem title = "CATEGORIES" Icon = {CollectionIcon} page = "/categories"/>
         </div>

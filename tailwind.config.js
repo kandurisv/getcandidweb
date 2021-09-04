@@ -10,6 +10,12 @@ module.exports = {
         "3xl" : "2000px"
       }
     },
+    // colors: {
+      // transparent: 'transparent',
+      // current: 'currentColor',
+    //   theme: '#D7354A',
+    //   theme1: '#F23D55',
+    // },
   },
   variants: {
     extend: {

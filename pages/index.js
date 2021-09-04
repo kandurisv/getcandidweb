@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from '../Components/Header'
+import HeaderNoSearch from '../Components/HeaderNoSearch'
 import Footer from '../Components/Footer'
 import InstagramWidget from '../Components/InstagramWidget'
 import MainPage from '../Components/MainPage'
@@ -8,6 +8,8 @@ import axios from 'axios'
 import React from 'react'
 import { useRouter } from 'next/router'
 import { route } from 'next/dist/next-server/server/router'
+import ImageMainPage from '../Components/ImageMainPage'
+import LandingPage from '../Components/LandingPage'
 
 
 
@@ -48,20 +50,22 @@ import { route } from 'next/dist/next-server/server/router'
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
-        <div className = "bg-white lg:sticky lg:top-0 lg:z-50">
-          <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} />
+        <div className = "bg-white lg:top-0 lg:z-50">
+          {/* <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} /> */}
+          <HeaderNoSearch />
         </div>
-        <div className = "bg-blue-50 flex items-center justify-center py-1">
+        {/* <div className = "bg-blue-50 flex items-center justify-center py-1">
           <h1 className = "">For full functionality, Download our <a 
           href='https://play.google.com/store/apps/details?id=com.candid.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
           target="_blank"
           rel="noreferrer"
           className = "cursor-pointer text-blue-500 hover:border-b-2 hover:border-blue-400 ">App</a> </h1>
-        </div>
+        </div> */}
         <div>
-          <MainPage content= {data} />
+          {/* <ImageMainPage content= {data} /> */}
+          <LandingPage content= {data} />
         </div>
-        <div className = "bg-white lg:sticky lg:bottom-0 lg:z-50">
+        <div className = "bg-white lg:bottom-0 lg:z-50 mt-20">
           <Footer />
         </div>
       </div>
@@ -84,7 +88,10 @@ export async function getServerSideProps() {
   
 
   // Fetch data from external API
-  const res = await fetch(API + 'home/')
+  // const res = await fetch(API + 'home/')
+  // const data = await res.json()
+
+  const res = await fetch(API + 'brands/top')
   const data = await res.json()
   
   // Pass data to the page via props
