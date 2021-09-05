@@ -4,15 +4,15 @@ import React from 'react'
 const LandingScreen1 = () => {
     return (
         <div>
-           <div className = "flex flex-row mt-10">
-                <div className = "flex flex-1 flex-col mx-4  items-center pt-20">
+           <div className = "flex flex-col lg:flex-row mt-10">
+                <div className = "flex flex-1 flex-col mx-4  items-center pt-10 lg:pt-20">
                     <h2 className = "flex flex-wrap font-bold text-4xl mt-5 font-semibold text-lg text-center my-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-[#d83c51] to-[#efb0b8]">DISCOVER AMAZING PRODUCTS PERSONALIZED FOR YOU</h2>
                     <h4 className = "flex flex-wrap text-center	text-sm px-5 mt-3 ">We are a social product discovery platform where people read and share their personal care routines and product journey</h4>
                 </div>
-                <div className = "flex flex-1 flex-col mx-4 items-center">
+                <div className = "flex flex-1 flex-col mx-4 items-center pt-10 lg:pt-0">
                     <Image width={300} height={533} src={'/Discovery.png'} alt="Candid Logo" layout = 'fixed'/>
                 </div>
-                <div className = "flex flex-1 flex-col mx-4  items-center pt-20">
+                <div className = "flex flex-1 flex-col mx-4  items-center pt-10 lg:pt-20">
                     <h2 className = "flex flex-wrap font-bold text-2xl mt-5 text-transparent bg-clip-text bg-gradient-to-br from-[#d83c51] to-[#efb0b8]">JOIN CANDID TODAY</h2>
                     <h4 className = "flex flex-wrap font-semibold text-lg mt-3">Download our android app</h4>
                     <a 
