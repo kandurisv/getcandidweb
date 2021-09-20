@@ -1,13 +1,15 @@
 import React from 'react'
 import Head  from 'next/head'
 
-import FACEBOOK_PIXEL_1 from './facebook/pixel-1'
+import Pixel1 from './facebook/pixel1'
 
-export default ({name}) => {
+const Pixel = ({name}) => {
 
   return(
     <Head>
-      {name === 'FACEBOOK_PIXEL_1' && <FACEBOOK_PIXEL_1 />}
+      {name === 'FACEBOOK_PIXEL_1' && <Pixel1 />}
     </Head>
   )
 }
+
+export default Pixel
