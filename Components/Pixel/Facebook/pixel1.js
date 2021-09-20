@@ -1,6 +1,7 @@
 import React from 'react'
 
  const Pixel1 = () => {
+   return(
   <React.Fragment>
     <script dangerouslySetInnerHTML={{ __html: `!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,7 +17,7 @@ import React from 'react'
     <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=946468125908254&ev=PageView&noscript=1" />` }}
     />
-  </React.Fragment>
+  </React.Fragment>)
   }
 
 
