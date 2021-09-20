@@ -1,7 +1,7 @@
 import React from 'react'
 import Head  from 'next/head'
 
-import Pixel1 from './facebook/pixel1'
+import Pixel1 from './Facebook/pixel1'
 
 const Pixel = ({name}) => {
 
