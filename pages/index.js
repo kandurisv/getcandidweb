@@ -10,6 +10,7 @@ import { useRouter } from 'next/router'
 import { route } from 'next/dist/next-server/server/router'
 import ImageMainPage from '../Components/ImageMainPage'
 import LandingPage from '../Components/LandingPage'
+import Pixel from '../Components/Pixel'
 
 
 
@@ -50,6 +51,7 @@ import LandingPage from '../Components/LandingPage'
         <link rel="icon" href="/500SCircle.png" />
       </Head>
       <div>
+        <Pixel name='FACEBOOK_PIXEL_1' />
         <div className = "bg-white lg:top-0 lg:z-50">
           {/* <Header onSearchHeader = {(keyword)=>searchTextClick(keyword)} /> */}
           <HeaderNoSearch />
